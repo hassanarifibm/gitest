@@ -19,6 +19,7 @@ on:
          description: 'School Name'
          default: 'Class 1'
          required: true
+         type: password
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
