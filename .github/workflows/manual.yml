@@ -27,7 +27,7 @@ jobs:
         run: ls -lt gitesting/src/gitesting/
       
       - name: test
-        run: java ./gitesting/src/gitesting/MainClass
+        run: java gitesting/src/gitesting/MainClass
         
       - name: uplaod artifacts
         uses: actions/upload-artifact@v2
