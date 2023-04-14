@@ -1,4 +1,4 @@
-package gitesting;
+package gitesting.src.gitesting;
 
 public class MainClass {
 	public static void main(String[] args0) {
