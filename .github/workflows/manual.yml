@@ -1,16 +1,30 @@
-name: My Scheduled Workflow
+name: Java Workflow
 
 on:
-  #schedule:
-  #  - cron: '*/5 * * * *'  # Schedule to run every five minutes
-
+  push:
+    branches:
+       - master
+       
 jobs:
-  my_job:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run my job
-        run: echo "This is my scheduled job!"
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: 8
+      - name: build
+        run: javac ./gitesting/src/gitesting/MainClass.java
+      
+      - name: test
+        run: java ./gitesting/src/gitesting/MainClass
+        
+      - name: uplaod artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact1
+          path: ./myartifactpath
