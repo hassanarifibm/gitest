@@ -24,7 +24,7 @@ jobs:
         run: javac ./gitesting/src/gitesting/MainClass.java
         
       - name: dir listing
-        run: ls -lt
+        run: ls -lt gitesting/src/gitesting/
       
       - name: test
         run: java ./gitesting/src/gitesting/MainClass
