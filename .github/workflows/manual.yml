@@ -33,4 +33,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my-artifact1
+          run: ls -lt
           path: ./gitesting/src/gitesting/MainClass
