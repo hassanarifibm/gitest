@@ -9,4 +9,4 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: printing global var
-       run: Global value $globalvar1
+       run: echo Global value $globalvar1
