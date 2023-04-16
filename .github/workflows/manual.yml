@@ -2,7 +2,7 @@ name: newdemo
 on:
  push:
    branches:
-      - master
+      - main
 
 jobs:
   jobname:
