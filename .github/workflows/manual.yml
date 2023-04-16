@@ -1,19 +1,1 @@
-name: variable-demo
 
-on: [push]
-
-env:
-  user_name: "Chaminda"
-  demo_name: "Variable Demo"
-
-jobs:
-  VariableUsageJob:
-    runs-on: ubuntu-latest
-    env:
-      job_var1: "job variable value"
-    steps:
-      - name: Using workflow variables
-        run: echo Hello, $user_name!
-           Welcome to $demo_name!!!
-        env:
-          step_var1: "Step variable value"          
