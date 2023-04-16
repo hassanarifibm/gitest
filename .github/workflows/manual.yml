@@ -1,1 +1,25 @@
-
+name: VaribleDemo
+on: [push]
+env:
+  - name: Global variable declaration
+    globalVar1: "Global var1 value"
+    galobalVar2: "Global var2 value"
+jobs:
+  VariableUsageJob:
+    runs-on: ubuntu-latest
+    env:
+      job_var1: "job var1 value"
+    steps:
+      - name: Using workflow variables
+        run: echo Hello, $globalVar1 $globalVar2
+             here is jobvar1 $job_var1
+        
+        env:
+          step_var1: "Step level var1"
+      - name: Set user name var
+        run: echo "::set-env name=globalVar1::NewValueOfGlobalVar"
+      - name: set new value of new_var
+        run: echo "::set-env name=new_var::newvarvalue"
+      - name: using variables
+        run: echo Hello, $globalVar1
+             Welcome $new_var
