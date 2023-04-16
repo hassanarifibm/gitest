@@ -10,3 +10,5 @@ jobs:
     steps:
       - name: checking out branch
         uses: actions/checkout@main
+      - name: test printing secrets
+        run: echo ${{ secrets.MYSECRET1 }}
