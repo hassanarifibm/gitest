@@ -1,7 +1,6 @@
 name: VaribleDemo
 on: [push]
 env:
-  - name: Global variable declaration
     globalVar1: "Global var1 value"
     galobalVar2: "Global var2 value"
 jobs:
