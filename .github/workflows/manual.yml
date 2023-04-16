@@ -9,4 +9,6 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: printing global var
-       run: echo Global value $globalvar1
+       run: echo Global value $globalvar1 envlevel1 is $envlevel1
+     env:
+       envlevel1: "envlevel1"
