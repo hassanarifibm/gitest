@@ -1,36 +1,19 @@
-name: Java Workflow
+name: variable-demo
 
-on:
-  push:
-    branches:
-       - main
-       
+on: [push]
+
+env:
+  user_name: "Chaminda"
+  demo_name: "Variable Demo"
+
 jobs:
-  build:
+  VariableUsageJob:
     runs-on: ubuntu-latest
-
+    env:
+      job_var1: "job variable value"
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Java 11
-        uses: actions/setup-java@v1
-        with:
-         java-version: 11
-         distribution: 'jdk'  # Specify the desired Java distribution
-        
-        
-      - name: build
-        run: javac ./gitesting/src/gitesting/MainClass.java
-        
-      - name: dir listing
-        run: ls -lt gitesting/src/gitesting/
-      
-      - name: test
-        run: java gitesting/src/gitesting/MainClass
-        
-      - name: uplaod artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: my-artifact1
-          path: ./gitesting
+      - name: Using workflow variables
+        run: echo Hello, $user_name!
+           Welcome to $demo_name!!!
+        env:
+          step_var1: "Step variable value"          
