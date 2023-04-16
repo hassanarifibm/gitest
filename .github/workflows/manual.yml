@@ -1,14 +1,12 @@
 name: newdemo
-on: [push]
-env:
- globalvar1: "globalvar1"
- globalvar2: "globalvar2"
+on:
+ push:
+   branches:
+      - master
 
 jobs:
- BuildJob:
-   runs-on: ubuntu-latest
-   steps:
-     - name: printing global var
-       run: echo GITHUB_ACTOR $GITHUB_ACTOR
-     - name: checkingout master branch
-       uses: actions/checkout@master
+  jobname:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking out branch
+        uses: actions/checkout@main
