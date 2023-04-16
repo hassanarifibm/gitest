@@ -1,20 +1,12 @@
-name: VaribleDemo
+name: newdemo
 on: [push]
 env:
-    globalVar1: "Global var1 value"
-    galobalVar2: "Global var2 value"
+ globalvar1: "globalvar1"
+ globalvar2: "globalvar2"
+
 jobs:
-  VariableUsageJob:
-    runs-on: ubuntu-latest
-    env:
-      job_var1: "job var1 value"
-    steps:
-      - name: Using workflow variables
-        run: echo Hello, $globalVar1 $globalVar2
-             here is jobvar1 $job_var1
-        
-        env:
-          step_var1: "Step level var1"
-      - name: using variables
-        run: echo Hello, $globalVar1
-             Welcome $step_var1
+ BuildJob:
+   runs-on: ubuntu-latest
+   steps:
+     - name: printing global var
+       run: Global value $globalvar1
