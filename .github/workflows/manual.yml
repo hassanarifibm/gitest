@@ -14,4 +14,4 @@ jobs:
       - name: Step is going to fail
         run: echo ${{ github.run_id }}
              echo ${{ github.workflow }}
-             echo ${{ secrets.github.repository }}
+             echo ${{ github.repository }}
