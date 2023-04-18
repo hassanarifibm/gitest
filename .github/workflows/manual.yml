@@ -20,7 +20,7 @@ jobs:
            repository: hassanarifibm/gitesting
            ref: main
            path: hassanarifibm/gitesting
-           token: ${{ secrets.PAT_GIT1 }}
+           token: ${{ secrets.PAT2 }}
       
       - name: another branch checkedout
         run: echo another branch checked out
