@@ -19,7 +19,7 @@ jobs:
         with:
            repository: hassanarifibm/gitesting
            ref: main
-           path: hassanarifibm/gitesting
+           path: gitesting
            token: ${{ secrets.PAT1 }}
       
       - name: another branch checkedout
