@@ -13,5 +13,5 @@ jobs:
 
       - name: Step is going to fail
         run: echo ${{ github.run_id }}
-             echo ${{ github.run_id }}
-             echo ${{ secrets.PAT1 }}
+             echo ${{ github.workflow }}
+             echo ${{ secrets.github.repository }}
