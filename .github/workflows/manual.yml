@@ -13,3 +13,13 @@ jobs:
       
       - name: branch main 111 checkedout
         run: echo branch main 111 checked out.
+      
+      - name: checkingout another branch
+        uses: actions/checkout@v3
+        with:
+           repository: hassanarifibm/gitesting
+           ref: main
+           path: gitesting
+      
+      - name: another branch checkedout
+        run: echo another branch checked out
