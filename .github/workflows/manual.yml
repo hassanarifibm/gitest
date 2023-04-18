@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checking out branch
-        uses: actions/checkout@main
-      - name: test printing secrets
-        run: echo ${{ secrets.MYSECRET11 }}
+        uses: actions/checkout@main111
+      
+      - name: branch main 111 checkedout
+        run: echo branch main 111 checked out.
