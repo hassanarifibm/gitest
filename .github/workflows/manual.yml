@@ -10,6 +10,16 @@ jobs:
     steps:
       - name: Step is going to pass
         run: echo Passing step
+        
+      - name: listing variables
+        run: |
+          if [ -z "${{ secrets.repository }}" ]; then
+            echo "repository is not defined"
+            exit 1
+          else
+            echo "MY_SECRET exists"
+          fi
+ 
 
       - name: Step is going to fail
         run: exit 1
