@@ -5,26 +5,15 @@ on:
       - main
 
 jobs:
-  jobname:
+  FailJobIssueDemo:
     runs-on: ubuntu-latest
     steps:
-      - name: checking out branch
-        uses: actions/checkout@main
-      
-      - name: branch main 111 checkedout
-        run: echo branch main 111 checked out.
-      
-      - name: checkingout another branch
-        uses: actions/checkout@v3
-        with:
-           repository: gitesting
-           ref: main
-           path: gitesting
-           token: ${{ secrets.PAT1 }}
-      
+      - name: Step is going to pass
+        run: echo Passing step
+
       - name: Step is going to fail
         run: exit 1
-           
+
       - name: Step To run on failure
         if: ${{ failure() }}
         run: |
@@ -39,6 +28,3 @@ jobs:
             the GitHub Action workflow **${{ github.workflow
             }}**. \n\n due to failure in run: _${{ github.run_id }}_."
             }'
-      
-      - name: another branch checkedout
-        run: echo another branch checked out
