@@ -15,4 +15,5 @@ jobs:
        run: exit 1
        
      - name: Step to run on failure
+       if: ${{ failure() }}
        run: echo https://api.github.com/repos/${{ github.repository }}/issues
