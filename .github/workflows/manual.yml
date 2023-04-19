@@ -17,3 +17,6 @@ jobs:
           token: ${{ secrets.CHECKOUT_TEST }}
       - name: dir listing
         run: cd /home/runner/work/gitest && tree
+      
+      - name: printing date
+        run: date
