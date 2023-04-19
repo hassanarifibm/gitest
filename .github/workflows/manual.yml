@@ -14,6 +14,6 @@ jobs:
           repository: hassanarifibm/gitesting
           ref: main
           path: gitesting
-          token: ${{ secrets.NEWPAT }}
+          token: ${{ secrets.CHECKOUT_TEST }}
       - name: dir listing
         run: cd /home/runner/work/gitest && tree
