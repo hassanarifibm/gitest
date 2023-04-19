@@ -16,4 +16,4 @@ jobs:
           path: gitesting
           token: ${{ secrets.NEWPAT }}
       - name: dir listing
-        run: ls -lt /home/runner/work/gitest/gitest/gitesting
+        run: ls -lt /home/runner/work/gitest/gitest/gitesting/src/gitesting/
