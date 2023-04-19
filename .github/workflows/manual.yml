@@ -1,4 +1,4 @@
-name: newdemo
+name: FailureCheck
 on:
  push:
    branches:
@@ -8,15 +8,11 @@ jobs:
   FailJobIssueDemo:
     runs-on: ubuntu-latest
     steps:
-      - name: checking out new branch
-        uses: actions/checkout@v3
-        with:
-          repository: hassanarifibm/gitesting
-          ref: main
-          path: gitesting
-          token: ${{ secrets.CHECKOUT_TEST }}
-      - name: dir listing
-        run: cd /home/runner/work/gitest && tree
-      
-      - name: printing date
-        run: date
+     - name: This step is gonig to pass by printing date
+       run: date
+       
+     - name: Step to be failed
+       run: exit 1
+       
+     - name: Step to run on failure
+       run: echo https://api.github.com/repos/${{ github.repository }}/issues
